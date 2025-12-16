@@ -1,3 +1,4 @@
+// author: Jyoti Sajwan
 import{test,expect} from '@playwright/test'
 import { LoginPage } from '../webapp_page_objects/LoginPage';
 import dataset from '../utils/loginTestData.json';
@@ -10,7 +11,7 @@ import dataset from '../utils/loginTestData.json';
  })
 
 //  Login with Invalid Credential
-test(`login into a app with invalid credential` , async({browser, page})=>{
+ test(`login into a app with invalid credential` , async({browser, page})=>{
     const loginPage = new LoginPage(page);
     await loginPage.goToUrl();
     await loginPage.validLogin('jyoti.sajwan@gmail.com', 'IamKing@008');
